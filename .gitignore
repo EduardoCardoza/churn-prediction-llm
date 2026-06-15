@@ -1,0 +1,10 @@
+# Entornos y cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Variables de entorno (API keys)
+.env
+
+# Sistema
+.DS_Store
