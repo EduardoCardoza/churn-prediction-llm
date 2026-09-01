@@ -228,14 +228,31 @@ Simulación sobre 100 predicciones individuales consecutivas:
 
 📄 Ver detalle completo: `artifacts/resultados_online.csv`
 
-### 5.3 Ejemplo de Explicación LLM
+## 5.3 Experimentos MLflow (DagsHub)
 
-A continuación un ejemplo de la salida del sistema de explicación
-para un cliente con alto riesgo de churn:
+Todos los experimentos del proyecto están registrados y disponibles públicamente:
 
-> *"0536-BGFMZ,No Churn,0.0,No Churn,"Nuestro análisis sugiere que este cliente tiene un bajo riesgo de cancelar el servicio, con una probabilidad de churn del 0%. Esto se debe a que el cliente tiene una antigüedad significativa de 28 meses, lo que indica una relación estable con nuestra empresa. Además, el cargo mensual moderado de $20.5 también contribuye a esta baja probabilidad de cancelación. Considerando estos factores, podríamos considerar ofrecer un servicio adicional, como internet de alta velocidad, para aumentar la satisfacción del cliente y fortalecer nuestra relación con él."*
+🔗 **[Ver experimentos en DagsHub](https://dagshub.com/EduardoCardoza/churn-prediction-llm/experiments)**
 
-📄 Ver todas las explicaciones: `artifacts/explicaciones_llm.html`
+### Experimentos registrados
+
+| Run Name | Algoritmo | F1 | ROC-AUC | Latencia (ms) |
+|---|---|---|---|---|
+| logistic_regression_baseline | Logistic Regression | [0.6049] | [0.8062] | [2.04] |
+| random_forest_baseline | Random Forest | [0.5889] | [0.8048] | [23.08] |
+| gradient_boosting_baseline | Gradient Boosting | [0.5837] | [0.7935] | [2.55] |
+| **random_forest_tuned_BEST** ✅ | **RF Tuned** | **[0.6247]** | **[0.7544]** | **[22.05]** |
+
+### Modelo productivo
+
+El mejor modelo fue registrado en el **MLflow Model Registry** bajo el nombre:
+
+churn-prediction-rf-prod
+
+
+Disponible en:
+🔗 https://dagshub.com/EduardoCardoza/churn-prediction-llm/models
+
 
 ---
 

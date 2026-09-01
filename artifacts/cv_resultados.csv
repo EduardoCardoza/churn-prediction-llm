@@ -1,0 +1,5 @@
+modelo,f1_cv_mean,f1_cv_std
+Logistic Regression,0.5986,0.028
+Random Forest,0.5455,0.0222
+Gradient Boosting,0.5705,0.028
+RF Tuned (Best),0.6302,0.0175
