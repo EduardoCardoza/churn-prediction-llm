@@ -1,0 +1,10 @@
+{
+  "total_registros": 7043,
+  "total_features_originales": 20,
+  "total_features_encoded": 30,
+  "registros_train": 5634,
+  "registros_test": 1409,
+  "proporcion_churn_train": 0.2654,
+  "proporcion_churn_test": 0.2654,
+  "columnas_con_nulos_corregidas": 1
+}
